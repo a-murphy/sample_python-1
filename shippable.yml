@@ -23,4 +23,4 @@ script:
 
 notifications: false
 
-upload: true
+archive: true
