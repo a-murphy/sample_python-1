@@ -23,4 +23,6 @@ script:
 
 notifications: false
 
-archive: true
+branches:
+  only:
+    - master
