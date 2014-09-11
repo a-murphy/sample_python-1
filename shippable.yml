@@ -22,5 +22,5 @@ script:
   - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
 
 branches:
-  only:
-    - master
+  except:
+    - test
