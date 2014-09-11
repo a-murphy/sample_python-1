@@ -20,10 +20,3 @@ notifications:
   email:
     on_success: always
 
-branches:
-  only:
-    - master
-
-
-build_image: shippable/minv2
-cache: true
