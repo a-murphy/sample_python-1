@@ -22,7 +22,6 @@ script:
   - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
 
 notifications:
-  email:
-    on_success: always
+  email: false
 
 cache: true
