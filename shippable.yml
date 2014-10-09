@@ -23,5 +23,7 @@ script:
 
 notifications:
   email: false
+  
+commit_container: ''
 
 cache: true
