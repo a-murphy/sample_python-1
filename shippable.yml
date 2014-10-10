@@ -24,3 +24,5 @@ script:
 branches:
   only:
     - test
+    
+build_image_provider: none
