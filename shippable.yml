@@ -25,3 +25,4 @@ branches:
   only:
     - test
     
+build_timeout: 60
