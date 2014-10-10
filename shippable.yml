@@ -25,4 +25,4 @@ branches:
   only:
     - test
     
-build_image_provider: none
+build_image: none
