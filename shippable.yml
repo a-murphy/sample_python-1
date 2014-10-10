@@ -21,9 +21,9 @@ script:
   - which python && coverage run --branch test.py
   - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
 
-branches:
-  only:
-    - test
+matrix:
+  include:
+    - test-reset
     
 env:
- - secure: 10
+ - secure: 1DGyF/fCBltlDbZmiFKnGFnmAI064GUyvfvK8HXDxEaewIAF4cgYhvpmHB/azfKKrMu05wtnhDU1dIZxVlyTg7waBQk2LhRAb9/eOvMKkeDoOvbDedwRRah9SF6/IStEz9gEXFQFFMvs9poGCx7PRhBdn7QLAeH5RHmHDfjJWKfUeuE4rs/b0CY0cwPxVzc1VH3xmCT31evb66ClGJ4dY0zFK6aYUYCe/lXG7dTjFDYN3kpBSehWOBzKaMbfg2wBCiunNm6jTmvcQdbqL6mgIEDPHre97sHSyAGF+81Al9LU2I1ek+HRPghFLlKBbeAsg==
