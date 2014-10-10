@@ -25,4 +25,5 @@ branches:
   only:
     - test
     
-build_image: customimage
+build_image: 
+  not_name: customimage
