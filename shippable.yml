@@ -25,6 +25,6 @@ notifications:
   email: false
 
 branches:
-  except:
+  only:
     - master
     
