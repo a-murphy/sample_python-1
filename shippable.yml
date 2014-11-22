@@ -24,8 +24,6 @@ script:
 notifications:
   email: false
 
-branches:
-  only:
-    - master
-    
 cache: true
+
+build_image: shippable/minv2
