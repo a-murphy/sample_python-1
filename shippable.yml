@@ -25,3 +25,4 @@ notifications:
 cache: true
 
 build_image: shippable/minv2
+
