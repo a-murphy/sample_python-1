@@ -11,8 +11,8 @@ python:
 install:
   - pip install -r requirements.txt
 
-# Make folders for the reports
 before_script:
+  # Make folders for the reports
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
 
