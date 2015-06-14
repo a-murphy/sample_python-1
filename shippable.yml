@@ -24,7 +24,7 @@ script:
 notifications:
   - email: false
 
-archive: true
+
 cache: true
 commit_container: amurphy/sample_python
 build_image: amurphy/sample_python:latest
