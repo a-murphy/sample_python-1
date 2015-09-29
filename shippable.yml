@@ -18,8 +18,7 @@ script:
   - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
 
 notifications:
-  - email: false
-  - irc: localhost
+  - email: aidan@shippable.com
   
 branches:
   except:
