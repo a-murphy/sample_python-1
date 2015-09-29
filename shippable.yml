@@ -25,4 +25,5 @@ branches:
   except:
    - September-2015
 
+build_timeout: 10
 cache: true
