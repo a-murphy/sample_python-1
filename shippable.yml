@@ -1,5 +1,4 @@
-language:
- - python
+language: cplus
 
 python:
   - 2.6
