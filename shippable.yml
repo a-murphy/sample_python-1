@@ -22,7 +22,7 @@ notifications:
   
 branches:
   only:
-   - September-2015
+   - master
 
 
 cache: true
