@@ -21,7 +21,7 @@ notifications:
   - email: false
   
 branches:
-  only:
+  except:
    - September-2015
 
 cache: true
