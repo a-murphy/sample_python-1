@@ -27,3 +27,5 @@ branches:
 
 build_timeout: 10
 cache: true
+parallelized_test: "true"
+archive: false
