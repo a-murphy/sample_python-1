@@ -3,10 +3,6 @@ language: python
 python:
   - 2.6
   - 2.7
-  - 3.2
-  - 3.3
-  - 3.4
-  - pypy
   
 install:
   - pip install -r requirements.txt
@@ -23,8 +19,10 @@ script:
 
 notifications:
   - email: false
+  
+branches:
+  only:
+   - September-2015
 
 
 cache: true
-commit_container: amurphy/sample_python
-build_image: amurphy/sample_python:latest
