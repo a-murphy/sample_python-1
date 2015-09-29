@@ -18,7 +18,8 @@ script:
   - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
 
 notifications:
-  - email: aidan@shippable.com
+  - email:
+      recipients: aidan@shippable.com
   
 branches:
   except:
