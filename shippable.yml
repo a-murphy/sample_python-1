@@ -26,4 +26,3 @@ branches:
 
 build_timeout: 10
 cache: true
-archive: true
