@@ -20,5 +20,4 @@ script:
 notifications:
   - email: false
 
-build_timeout: 10
 cache: true
