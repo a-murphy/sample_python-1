@@ -7,6 +7,7 @@ python:
 env:
   global:
     - secure: Zxjl/lSzj1VjlLygFlXf89613x09U/SuBerB9ZjIqcFs19zC+6JywyZ3El/vJ5nbZrBD0qc5p5fVmMwFpbhsCri7Tp8ra4iZDWUWlA8DIxjzdLTfpddrWiC4t24RIl5xyv7nEcshZIOS0rxe/mgkWXEEH1+xIhj+09GLmzbWDf7/9DI05yzmBc6HkiFTaf9RbfISFh1uhfvUx8wqizU02NWO5MtFfH5ru+E1xarILI+IDwb+xIUncEtCpwkFJ0WE7sprW3T4bGPZUAHV94XFVqs2TVgUz1w5SCc23ivwN8G0Cjz0hQ/UWC+eTtI0KcY9zKdnbtnYOVMHTRXwXhjA== 
+    - secure: KXFUm1t+kNjq9l6F2EBN4K8lDOMs6kpLumbAOLVufktvb8dOfE9WH+tJ27l3DIa8lnYNB4/qT7ckqvMj5egBBy8B/bf04yIkRyUqvlhwSQegdPxYNsFXtow5PzVzkDro2Wn30Ymb0M+Qj5Am0zMXV8xOqsr2SW2YlS+tQGtajsyE1/i43PlSOPedpdxiPox/+L1c8Nz4Ue1sicuERLBq/CZYkeUdeaooEh0uzi6xdpGwJMBZxEUs3Fz4eS2JO55jHqF7sc4sEPkHNwn/lshRvsCzBKJjdpkRnAlmEn/e0xBBHQzeeIAFsWiqdxmIwvPVeiVsEf5i2F1jV1ACSEQtTw== 
 
 branches:
   only:
@@ -19,6 +20,7 @@ before_script:
   # Make folders for the reports
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  - echo $testnull
   - echo $test
 
 script:
