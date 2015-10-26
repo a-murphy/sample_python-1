@@ -7,7 +7,7 @@ python:
 matrix:
   exclude:
     - python: 2.7
-      secure: Zxjl/lSzj1VjlLygFlXf89613x09U/SuBerB9ZjIqcFs19zC+6JywyZ3El/vJ5nbZrBD0qc5p5fVmMwFpbhsCri7Tp8ra4iZDWUWlA8DIxjzdLTfpddrWiC4t24RIl5xyv7nEcshZIOS0rxe/mgkWXEEH1+xIhj+09GLmzbWDf7/9DI05yzmBc6HkiFTaf9RbfISFh1uhfvUx8wqizU02NWO5MtFfH5ru+E1xarILI+IDwb+xIUncEtCpwkFJ0WE7sprW3T4bGPZUAHV94XFVqs2TVgUz1w5SCc23ivwN8G0Cjz0hQ/UWC+eTtI0KcY9zKdnbtnYOVMHTRXwXhjA==
+      secure: Pxd0iVa1XveJSkWbLLQJgikPputpOI6IIfvWtyAOpP9bQA7NFeqh+VSLzXZnL6w0V3HjIov9Tlfw+ZPSUTUmJwK+llwDcz42wPv5KTKzIESsPUQFTaR3PwAOk9T3za0sME9rh/5QMYOkYsD9mq73EfryCpIrH+qNBm9vzW92kYKz0ujKBZlwAVYCMqwUbfbW2nhLPjt0XhJeKUZuRRSnPm+Zo5joCd0HI30eNmD7ScmUDT+FL0nkVrO/FXRH5pY7xiwv0cAbAj85Tq3rbSLFk2Lp0Gh53p+0M+TdBamXlCsuXRr/9awV25PXcy45vDPHcq7uv3PCw4t+nqW2G43a3Q== 
       
 env:
   - secure: Zxjl/lSzj1VjlLygFlXf89613x09U/SuBerB9ZjIqcFs19zC+6JywyZ3El/vJ5nbZrBD0qc5p5fVmMwFpbhsCri7Tp8ra4iZDWUWlA8DIxjzdLTfpddrWiC4t24RIl5xyv7nEcshZIOS0rxe/mgkWXEEH1+xIhj+09GLmzbWDf7/9DI05yzmBc6HkiFTaf9RbfISFh1uhfvUx8wqizU02NWO5MtFfH5ru+E1xarILI+IDwb+xIUncEtCpwkFJ0WE7sprW3T4bGPZUAHV94XFVqs2TVgUz1w5SCc23ivwN8G0Cjz0hQ/UWC+eTtI0KcY9zKdnbtnYOVMHTRXwXhjA==
