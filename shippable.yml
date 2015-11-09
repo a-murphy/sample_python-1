@@ -13,10 +13,6 @@ env:
   #- secure: Pxd0iVa1XveJSkWbLLQJgikPputpOI6IIfvWtyAOpP9bQA7NFeqh+VSLzXZnL6w0V3HjIov9Tlfw+ZPSUTUmJwK+llwDcz42wPv5KTKzIESsPUQFTaR3PwAOk9T3za0sME9rh/5QMYOkYsD9mq73EfryCpIrH+qNBm9vzW92kYKz0ujKBZlwAVYCMqwUbfbW2nhLPjt0XhJeKUZuRRSnPm+Zo5joCd0HI30eNmD7ScmUDT+FL0nkVrO/FXRH5pY7xiwv0cAbAj85Tq3rbSLFk2Lp0Gh53p+0M+TdBamXlCsuXRr/9awV25PXcy45vDPHcq7uv3PCw4t+nqW2G43a3Q==
   #- secure: KXFUm1t+kNjq9l6F2EBN4K8lDOMs6kpLumbAOLVufktvb8dOfE9WH+tJ27l3DIa8lnYNB4/qT7ckqvMj5egBBy8B/bf04yIkRyUqvlhwSQegdPxYNsFXtow5PzVzkDro2Wn30Ymb0M+Qj5Am0zMXV8xOqsr2SW2YlS+tQGtajsyE1/i43PlSOPedpdxiPox/+L1c8Nz4Ue1sicuERLBq/CZYkeUdeaooEh0uzi6xdpGwJMBZxEUs3Fz4eS2JO55jHqF7sc4sEPkHNwn/lshRvsCzBKJjdpkRnAlmEn/e0xBBHQzeeIAFsWiqdxmIwvPVeiVsEf5i2F1jV1ACSEQtTw== 
 
-branches:
-  only:
-    - 'September-2015'
-
 install:
   - pip install -r requirements.txt
 
