@@ -22,7 +22,11 @@ script:
   - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
 
 notifications:
-  - email: aidan@shippable.com
+  - email:
+     - on_success: 'always'
+     - on_failure: 'always'
+     - recipients:
+        - aidan@shippable.com
 
 
 cache: true
