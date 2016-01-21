@@ -23,17 +23,17 @@ build:
   on_success:
     - echo "The job succeeded!!!!"
 
-integrations:
-  hub:
-    - integrationName: "Docker Hub"
-      type: docker
-      branches:
-        only:
-          - master
-   - integrationName: "NONE"
-      type: slack
-      recepients:
-        - none
-      branches:
-        only:
-          - master
+  integrations:
+    hub:
+      - integrationName: "Docker Hub"
+        type: docker
+        branches:
+          only:
+            - master
+     - integrationName: "NONE"
+        type: slack
+        recepients:
+          - none
+        branches:
+          only:
+            - master
