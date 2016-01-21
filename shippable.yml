@@ -8,7 +8,7 @@ env:
     - FOO=BOO
 
 build:
-#  cache: true
+  cache: true
 
   ci:
     - pip install -r requirements.txt
