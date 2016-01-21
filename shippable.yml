@@ -9,7 +9,6 @@ env:
 
 build:
   cache: true
-
   ci:
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
@@ -21,7 +20,6 @@ build:
     - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
   on_failure:
     - echo "The job failed!!!!!"
-    
   on_success:
     - echo "The job succeeded!!!!"
 
