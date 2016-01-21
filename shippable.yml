@@ -37,3 +37,8 @@ build:
         branches:
           only:
             - master
+
+
+notifications:
+  irc:
+    - test
