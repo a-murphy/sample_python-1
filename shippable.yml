@@ -1,31 +1,45 @@
 language: python
 
+python:
+  - 2.7
+
+env:
+  global:
+    - FOO=BOO
+
+build:
+#  cache: true
+
+  ci:
+    - pip install -r requirements.txt
+    - mkdir -p shippable/testresults
+    - mkdir -p shippable/codecoverage
+    - echo $testnull
+    - echo $test
+    - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
+    - which python && coverage run --branch test.py
+    - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
+  on_failure:
+    - echo "The job failed!!!!!"
+    
+  on_success:
+    - echo "The job succeeded!!!!"
+
+integrations:
+  hub:
+    - integrationName: "Docker Hub"
+      type: docker
+      branches:
+        only:
+          - master
+
+          
+          
+          
+
 matrix:
   include:
     - python: 2.7
       secure: qT7ckqvMj5egBBy8B/bf04yIkRyUqvlhwSQegdPxYNsFXtow5PzVzkDro2Wn30Ymb0M+Qj5Am0zMXV8xOqsr2SW2YlS+tQGtajsyE1/i43PlSOPedpdxiPox/+L1c8Nz4Ue1sicuERLBq/CZYkeUdeaooEh0uzi6xdpGwJMBZxEUs3Fz4eS2JO55jHqF7sc4sEPkHNwn/lshRvsCzBKJjdpkRnAlmEn/e0xBBHQzeeIAFsWiqdxmIwvPVeiVsEf5i2F1jV1ACSEQtTw== 
 
-env:
-  #- secure: Pxd0iVa1XveJSkWbLLQJgikPputpOI6IIfvWtyAOpP9bQA7NFeqh+VSLzXZnL6w0V3HjIov9Tlfw+ZPSUTUmJwK+llwDcz42wPv5KTKzIESsPUQFTaR3PwAOk9T3za0sME9rh/5QMYOkYsD9mq73EfryCpIrH+qNBm9vzW92kYKz0ujKBZlwAVYCMqwUbfbW2nhLPjt0XhJeKUZuRRSnPm+Zo5joCd0HI30eNmD7ScmUDT+FL0nkVrO/FXRH5pY7xiwv0cAbAj85Tq3rbSLFk2Lp0Gh53p+0M+TdBamXlCsuXRr/9awV25PXcy45vDPHcq7uv3PCw4t+nqW2G43a3Q==
-  #- secure: KXFUm1t+kNjq9l6F2EBN4K8lDOMs6kpLumbAOLVufktvb8dOfE9WH+tJ27l3DIa8lnYNB4/qT7ckqvMj5egBBy8B/bf04yIkRyUqvlhwSQegdPxYNsFXtow5PzVzkDro2Wn30Ymb0M+Qj5Am0zMXV8xOqsr2SW2YlS+tQGtajsyE1/i43PlSOPedpdxiPox/+L1c8Nz4Ue1sicuERLBq/CZYkeUdeaooEh0uzi6xdpGwJMBZxEUs3Fz4eS2JO55jHqF7sc4sEPkHNwn/lshRvsCzBKJjdpkRnAlmEn/e0xBBHQzeeIAFsWiqdxmIwvPVeiVsEf5i2F1jV1ACSEQtTw== 
-
-install:
-  - pip install -r requirements.txt
-
-before_script:  
-  # Make folders for the reports
-  - mkdir -p shippable/testresults
-  - mkdir -p shippable/codecoverage
-  - echo $testnull
-  - echo $test
-
-script:
-  - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
-  - which python && coverage run --branch test.py
-  - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
-
-notifications:
-  - email: aidan@shippable.com
-
-cache: true
 
