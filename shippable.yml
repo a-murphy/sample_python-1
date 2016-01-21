@@ -32,3 +32,10 @@ integrations:
       branches:
         only:
           - master
+   - integrationName: "NONE"
+      type: slack
+      recepients:
+        - none
+      branches:
+        only:
+          - master
