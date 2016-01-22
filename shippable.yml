@@ -29,7 +29,7 @@ build:
         branches:
           only:
             - master
-       - integrationName: "NONE"
+     - integrationName: "NONE"
         type: slack
         recepients:
           - none
