@@ -38,7 +38,3 @@ build:
           only:
             - master
 
-
-notifications:
-  irc:
-    - test
