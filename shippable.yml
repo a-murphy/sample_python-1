@@ -22,7 +22,6 @@ build:
     - echo "The job failed!!!!!"
   on_success:
     - echo "The job succeeded!!!!"
-
   integrations:
     hub:
       - integrationName: "Docker Hub"
