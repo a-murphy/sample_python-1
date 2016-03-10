@@ -19,12 +19,15 @@ build:
     - which python && coverage run --branch test.py
     - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
     - whoami
+    - $PWD
   on_failure:
     - echo "The job failed!!!!!"
     - whoami
+    - $PWD
   on_success:
     - echo "The job succeeded!!!!"
     - whoami
+    - $PWD
   integrations:
     hub:
       - integrationName: "Docker Hub"
