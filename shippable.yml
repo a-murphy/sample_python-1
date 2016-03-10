@@ -5,7 +5,7 @@ python:
 
 env:
   global:
-    - FOO=BOO
+    - FOO=BOO ONE=1
 
 build:
   #cache: true
