@@ -5,14 +5,15 @@ python:
 
 env:
   global:
-    - FOO=BOO
+    - FOO=BOO ONE=1
 
 build:
-  #cache: true
+  cache: true
   ci:
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
+    - shippable_cache_container
     - echo $testnull
     - echo $test
     - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
@@ -20,8 +21,10 @@ build:
     - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
   on_failure:
     - echo "The job failed!!!!!"
+    - whoami
   on_success:
     - echo "The job succeeded!!!!"
+    - whoami
   integrations:
     hub:
       - integrationName: "Docker Hub"
