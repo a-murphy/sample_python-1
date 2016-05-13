@@ -20,10 +20,10 @@ build:
     - which python && coverage run --branch test.py
     - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
   on_failure:
-    - echo "The job failed!!!!!"
+    - echo "The job failed"
     - whoami
   on_success:
-    - echo "The job succeeded!!!!"
+    - echo "The job succeeded"
     - whoami
   integrations:
     hub:
