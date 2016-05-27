@@ -10,8 +10,8 @@ env:
 build:
   pre_ci:
     - echo "true"
-    - ls /var/log/upstart
-    - cat /var/log/upstart/docker.log
+    - ls /var/logs/upstart
+    - cat /var/logs/upstart/docker.log
   ci:
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
