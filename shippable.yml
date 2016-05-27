@@ -14,6 +14,7 @@ build:
     - pwd
     - ls
     - ls $SHIPPABLE_BUILD_DIR
+    - find / -iname docker
   pre_ci_boot:
     image_name: drydock/u14pyt
     image_tag: prod
