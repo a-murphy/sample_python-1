@@ -11,7 +11,7 @@ build:
   pre_ci:
     - echo "true"
     - ls /var/log
-    - cat /var/log/docker.log
+    - pwd
   ci:
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
