@@ -8,13 +8,10 @@ env:
     - FOO=BOO ONE=1
 
 build:
-  cache: true
   ci:
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
-    - shippable_cache_container
-    - echo $test
     - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
     - which python && coverage run --branch test.py
     - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
@@ -31,4 +28,10 @@ build:
         branches:
           only:
             - master
-
+    notifications:
+      - integrationName: email
+        type: email
+        recipients:
+          - --lastcommitter
+        on_success: always
+        on_failure: always
