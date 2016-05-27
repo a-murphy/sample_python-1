@@ -21,6 +21,7 @@ build:
   on_success:
     - echo "The job succeeded"
     - whoami
+
   integrations:
     hub:
       - integrationName: "Docker Hub"
