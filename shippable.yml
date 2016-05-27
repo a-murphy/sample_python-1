@@ -8,7 +8,8 @@ env:
     - FOO=BOO ONE=1
 
 build:
-  cache: true
+  pre_ci:
+    - echo "true"
   ci:
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
