@@ -35,5 +35,5 @@ integrations:
       on_success: always
       on_failure: always
       recipients:
-        - --last_committer
+        - --lastcommitter
 
