@@ -33,6 +33,6 @@ build:
       - integrationName: email
         type: email
         recipients:
-          - --lastcommitter
+          - --last_committer
         on_success: always
         on_failure: always
