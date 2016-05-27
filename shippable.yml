@@ -34,5 +34,5 @@ build:
         type: email
         recipients:
           - --last_committer
-        on_success: always
+        on_success: 'always'
         on_failure: always
