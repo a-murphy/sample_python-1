@@ -12,6 +12,8 @@ build:
     - echo "true"
     - ls /var/log
     - pwd
+    - ls
+    - ls $SHIPPABLE_BUILD_DIR
   pre_ci_boot:
     image_name: drydock/u14pyt
     image_tag: prod
