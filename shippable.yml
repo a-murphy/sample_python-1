@@ -32,7 +32,8 @@ build:
     notifications:
       - integrationName: email
         type: email
+        on_success: always
+        on_failure: always
         recipients:
           - --last_committer
-        on_success: 'always'
-        on_failure: always
+
