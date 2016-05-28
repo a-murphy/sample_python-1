@@ -13,8 +13,8 @@ build:
     - ls /var/log
     - pwd
     - ls
-    - ls -l /var/log
-    - /var/log/daemon.log | grep docker
+    - ls -l /var/log/upstart
+    - /var/log/upstart/docker.log
   pre_ci_boot:
     image_name: drydock/u14pyt
     image_tag: prod
