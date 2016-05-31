@@ -12,7 +12,7 @@ build:
     - ls $SHIPPABLE_BUILD_DIR
     - cp -R $SHIPPABLE_BUILD_DIR /home/shippable/test
     - ls /home/shippable/test
-    - docker run -v /home/shippable/test:/test busybox sh -c "ls -al test"
+    - docker run -v /home/shippable/test:/home/shippable/test busybox sh -c "ls -al /home/shippable/test"
     - echo "true"
     - ls /var/log
     - pwd
