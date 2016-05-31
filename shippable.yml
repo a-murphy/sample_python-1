@@ -14,7 +14,7 @@ build:
     - chmod 777 $SHIPPABLE_BUILD_DIR
     - ls -al $SHIPPABLE_BUILD_DIR
     #- sudo useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable && sudo echo 'shippable ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers || true
-    - sudo docker run -v $SHIPPABLE_BUILD_DIR/directory:/test busybox sh -c "touch /test/testfile.txt"
+    - sudo docker run  --privileged=true -v $SHIPPABLE_BUILD_DIR/directory:/test busybox sh -c "touch /test/testfile.txt"
     - ls $SHIPPABLE_BUILD_DIR
     - echo "true"
     - ls /var/log
