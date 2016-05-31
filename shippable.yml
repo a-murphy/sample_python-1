@@ -12,8 +12,8 @@ build:
     - ls -al $SHIPPABLE_BUILD_DIR
     - chmod -R a+rw $SHIPPABLE_BUILD_DIR
     - ls -al $SHIPPABLE_BUILD_DIR
-    - sudo useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable && sudo echo 'shippable ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers || true
-    - su shippable && sudo docker run -v $SHIPPABLE_BUILD_DIR/directory:/test drydock/u14nod:prod sh -c "ls -al /test"
+    #- sudo useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable && sudo echo 'shippable ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers || true
+    - sudo docker run -v $SHIPPABLE_BUILD_DIR/directory:/test busybox sh -c "ls -al /test"
     - ls $SHIPPABLE_BUILD_DIR
     - echo "true"
     - ls /var/log
