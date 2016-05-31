@@ -9,7 +9,7 @@ env:
 
 build:
   pre_ci:
-    - sudo docker run -v $PWD:$PWD busybox sh -c "ls -lart /test"
+    - sudo docker run -v $PWD:/home/shippable busybox sh -c "ls -lart /home/shippable"
     - echo "true"
     - ls /var/log
     - pwd
