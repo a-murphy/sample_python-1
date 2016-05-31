@@ -14,6 +14,8 @@ build:
     - ls -al $SHIPPABLE_BUILD_DIR
     - chmod -R a+rw $SHIPPABLE_BUILD_DIR
     - chmod 777 $SHIPPABLE_BUILD_DIR
+    - chmod -R a+rw /root/src
+    
     - ls -al /root/src/github.com/a-murphy/sample_python-1
     - ls -al `pwd`
     - docker rm newtest
