@@ -15,7 +15,7 @@ build:
     - chmod 777 $SHIPPABLE_BUILD_DIR
     - ls -al /root/src/github.com/a-murphy/sample_python-1
     #- sudo useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable && sudo echo 'shippable ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers || true
-    - sudo docker run  --privileged=true -v /root/src/github.com/a-murphy/sample_python-1:/test busybox sh -c "ls -la /test"
+    - sudo docker run -v /root/src/github.com/a-murphy/sample_python-1:/test busybox sh -c "ls -la /test"
     - ls -R $SHIPPABLE_BUILD_DIR
     - echo "true"
     - ls /var/log
