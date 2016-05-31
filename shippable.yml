@@ -10,7 +10,9 @@ env:
 build:
   pre_ci:
     - ls $SHIPPABLE_BUILD_DIR
-    - docker run -v /root/src/github.com/a-murphy/sample_python-1:/test busybox sh -c "ls -al test"
+    - cp $SHIPPABLE_BUILD_DIR /home/shippable/test
+    - ls /home/shippable/test
+    - docker run -v /home/shippable/test:/test busybox sh -c "ls -al test"
     - echo "true"
     - ls /var/log
     - pwd
