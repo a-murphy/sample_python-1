@@ -10,7 +10,8 @@ env:
 build:
   pre_ci:
     - ls $SHIPPABLE_BUILD_DIR
-    - sudo docker run -v $SHIPPABLE_BUILD_DIR:/test busybox "ls -alR /test"
+    - sudo docker run -v $SHIPPABLE_BUILD_DIR:/test busybox sh -c "ls -alR /test"
+    - ls $SHIPPABLE_BUILD_DIR
     - echo "true"
     - ls /var/log
     - pwd
