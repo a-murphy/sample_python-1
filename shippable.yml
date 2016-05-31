@@ -12,7 +12,7 @@ build:
     - ls -al $SHIPPABLE_BUILD_DIR
     - chmod -R a+rw $SHIPPABLE_BUILD_DIR
     - ls -al $SHIPPABLE_BUILD_DIR
-    - sudo docker run -v $SHIPPABLE_BUILD_DIR:test:rw drydock/u14nod:prod sh -c "ls -al /"
+    - sudo docker run -v $SHIPPABLE_BUILD_DIR:/test:rw drydock/u14nod:prod sh -c "ls -al /"
     - ls $SHIPPABLE_BUILD_DIR
     - echo "true"
     - ls /var/log
