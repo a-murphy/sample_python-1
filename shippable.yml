@@ -23,6 +23,7 @@ build:
     - sudo docker run -v $SHIPPABLE_BUILD_DIR:$SHIPPABLE_BUILD_DIR --name=newtest busybox sh -c "ls -laR /root/src && touch /root/src/github.com/a-murphy/sample_python-1/testfile.txt && chmod 777 /root/src/github.com/a-murphy/sample_python-1/testfile.txt"
     - docker inspect newtest
     - ls -R $SHIPPABLE_BUILD_DIR
+    - find / -iname testfile.txt
     - echo "true"
     - ls /var/log
     - pwd
