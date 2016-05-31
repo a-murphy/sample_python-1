@@ -9,6 +9,7 @@ env:
 
 build:
   pre_ci:
+    - docker ps
     - ls -al $SHIPPABLE_BUILD_DIR
     - chmod -R a+rw $SHIPPABLE_BUILD_DIR
     - chmod 777 $SHIPPABLE_BUILD_DIR
