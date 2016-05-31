@@ -20,7 +20,7 @@ build:
     - ls -al `pwd`
     - docker rm newtest
     #- sudo useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable && sudo echo 'shippable ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers || true
-    - sudo docker run -v $SHIPPABLE_BUILD_DIR:$SHIPPABLE_BUILD_DIR --name=newtest busybox sh -c "ls -laR /root/src && touch /root/src/github.com/a-murphy/sample_python-1/testfile.txt"
+    - sudo docker run -v $SHIPPABLE_BUILD_DIR:$SHIPPABLE_BUILD_DIR --name=newtest busybox sh -c "ls -laR /root/src && touch /root/src/github.com/a-murphy/sample_python-1/testfile.txt && chmod 777 /root/src/github.com/a-murphy/sample_python-1/testfile.txt"
     - docker inspect newtest
     - ls -R $SHIPPABLE_BUILD_DIR
     - echo "true"
