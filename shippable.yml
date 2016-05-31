@@ -11,6 +11,7 @@ build:
   pre_ci:
     - ls -al $SHIPPABLE_BUILD_DIR
     - chmod -R a+rw $SHIPPABLE_BUILD_DIR
+    - chmod 777 $SHIPPABLE_BUILD_DIR
     - ls -al $SHIPPABLE_BUILD_DIR
     #- sudo useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable && sudo echo 'shippable ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers || true
     - sudo docker run -v $SHIPPABLE_BUILD_DIR/directory:/test busybox sh -c "ls -al /test"
