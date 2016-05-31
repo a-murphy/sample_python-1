@@ -10,7 +10,7 @@ env:
 build:
   pre_ci:
     - ls $SHIPPABLE_BUILD_DIR
-    - sudo docker run -v $SHIPPABLE_BUILD_DIR:/$SHIPPABLE_BUILD_DIR drydock/u14nod:prod sh -c "ls -alR /root/src/"
+    - sudo docker run -v $SHIPPABLE_BUILD_DIR:$SHIPPABLE_BUILD_DIR:rw drydock/u14nod:prod sh -c "ls -alR /root/src/"
     - ls $SHIPPABLE_BUILD_DIR
     - echo "true"
     - ls /var/log
