@@ -12,7 +12,7 @@ build:
     - ls -al $SHIPPABLE_BUILD_DIR
     - chmod -R a+rw $SHIPPABLE_BUILD_DIR
     - ls -al $SHIPPABLE_BUILD_DIR
-    - sudo useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable && sudo echo 'shippable ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers
+    - sudo useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable && sudo echo 'shippable ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers || true
     - sudo mkdir -p /home/shippable/.ssh/
     - sudo chown -R shippable:shippable /home/shippable/
     - su shippable -
