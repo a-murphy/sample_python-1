@@ -10,7 +10,7 @@ env:
 build:
   pre_ci:
     - ls $SHIPPABLE_BUILD_DIR
-    - cp $SHIPPABLE_BUILD_DIR /home/shippable/test
+    - cp -R $SHIPPABLE_BUILD_DIR /home/shippable/test
     - ls /home/shippable/test
     - docker run -v /home/shippable/test:/test busybox sh -c "ls -al test"
     - echo "true"
