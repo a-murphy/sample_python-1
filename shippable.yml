@@ -10,7 +10,8 @@ env:
 build:
   pre_ci:
     - ls
-    - docker run -v $PWD:/test busybox "ls -lart /test"
+    - docker run -v $PWD:/test busybox --name test
+    - docker exec test "ls -lart /test"
     - echo "true"
     - ls /var/log
     - pwd
