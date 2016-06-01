@@ -12,26 +12,24 @@ build:
     - docker ps
     - uname -a
     - ls -al $SHIPPABLE_BUILD_DIR
-    - chmod -R a+rw $SHIPPABLE_BUILD_DIR
-    - chmod 777 $SHIPPABLE_BUILD_DIR
-    - chmod -R a+rw /root/src
-    - cat /proc/1/cgroup
-    - docker inspect 37fc97475c53
+    #- chmod -R a+rw $SHIPPABLE_BUILD_DIR
+    - cp -R $SHIPPABLE_BUILD_DIR /tmp/ssh/test
     
-    - ls -al /root/src/github.com/a-murphy/sample_python-1
-    - ls -al `pwd`
-    - docker rm newtest || true
+    - ls -al /tmp/ssh/test
+    #- ls -al `pwd`
+    #- docker rm newtest || true
     #- sudo useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable && sudo echo 'shippable ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers || true
-    - sudo docker run -v $SHIPPABLE_BUILD_DIR:$SHIPPABLE_BUILD_DIR --name=newtest busybox sh -c "ls -laR /root/src && touch /root/src/github.com/a-murphy/sample_python-1/testfile.txt && chmod 777 /root/src/github.com/a-murphy/sample_python-1/testfile.txt"
+    - sudo docker run -v /tmp/ssh/test:/test busybox sh -c "ls -laR /test"
     - docker inspect newtest
     - ls -R $SHIPPABLE_BUILD_DIR
-    - find / -iname testfile.txt
+   # - find / -iname testfile.txt
     - echo "true"
-    - ls /var/log
-    - pwd
-    - ls
-    - ls -l /var/log/upstart
-    - /var/log/upstart/docker.log
+    
+    #- ls /var/log
+    #- pwd
+    #- ls
+    #- ls -l /var/log/upstart
+    #- /var/log/upstart/docker.log
   pre_ci_boot:
     image_name: drydock/u14pyt
     image_tag: prod
