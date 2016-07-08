@@ -3,20 +3,9 @@ language: python
 python:
   - 2.7
   - 2.6
-  - 3.0
-  - pypy
 
 env:
   - FOO=BOO ONE=1
-  - TWO=2
-  - THREE=3
-  - FOUR=4
-  - FIVE=5
-  - SIX=6
-  - SEVEN=7
-  - EIGHT=8
-  - NINE=9
-  - TEN=10
 
 build:
   pre_ci:
@@ -25,15 +14,9 @@ build:
     - ls -al $SHIPPABLE_BUILD_DIR
     #- chmod -R a+rw $SHIPPABLE_BUILD_DIR
     - cp -R $SHIPPABLE_BUILD_DIR /tmp/ssh/test
-    
-    - ls -al /tmp/ssh/test
     #- ls -al `pwd`
     #- docker rm newtest || true
     #- sudo useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable && sudo echo 'shippable ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers || true
-    - sudo docker run -v /tmp/ssh/test:/test busybox sh -c "ls -laR /test"
-    - docker inspect newtest
-    - ls -R $SHIPPABLE_BUILD_DIR
-   # - find / -iname testfile.txt
     - echo "true"
     
     #- ls /var/log
