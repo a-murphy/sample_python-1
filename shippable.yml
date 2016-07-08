@@ -43,7 +43,7 @@ build:
     #- /var/log/upstart/docker.log
   pre_ci_boot:
     image_name: drydock/u14pyt
-    image_tag: prod
+    image_tag: tip
     pull: true
     options: "-v $SHIPPABLE_BUILD_DIR:$SHIPPABLE_BUILD_DIR"
   ci:
