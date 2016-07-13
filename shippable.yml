@@ -56,7 +56,7 @@ build:
     - echo "The job failed"
     - whoami
   on_success:
-    - echo "The job succeeded"
+    - echo "The job succeeded!"
     - whoami
 
 integrations:
