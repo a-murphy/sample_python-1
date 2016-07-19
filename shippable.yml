@@ -32,10 +32,11 @@ build:
     - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
   on_failure:
     - echo "The job failed"
-     - echo "commit three"
+    - echo "commit three"
     - whoami
   on_success:
     - echo "The job succeeded"
+    - echo "commit four"
     - whoami
 
 integrations:
