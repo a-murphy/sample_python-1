@@ -13,7 +13,7 @@ build:
     - uname -a
     - ls -al $SHIPPABLE_BUILD_DIR
     #- chmod -R a+rw $SHIPPABLE_BUILD_DIR
-     - echo "anotherPullRequest"
+    - echo "anotherPullRequest"
     
     #- ls /var/log
     #- pwd
