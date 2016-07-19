@@ -27,12 +27,12 @@ build:
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
-    - echo "commit two"
     - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
     - which python && coverage run --branch test.py
     - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
   on_failure:
     - echo "The job failed"
+     - echo "commit three"
     - whoami
   on_success:
     - echo "The job succeeded"
