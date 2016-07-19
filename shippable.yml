@@ -11,13 +11,7 @@ build:
   pre_ci:
     - docker ps
     - uname -a
-    - ls -al $SHIPPABLE_BUILD_DIR
-    #- chmod -R a+rw $SHIPPABLE_BUILD_DIR
-    - cp -R $SHIPPABLE_BUILD_DIR /tmp/ssh/test
-    #- ls -al `pwd`
-    #- docker rm newtest || true
-    #- sudo useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable && sudo echo 'shippable ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers || true
-    - echo "true"
+    - echo "this is a pull request"
     
     #- ls /var/log
     #- pwd
