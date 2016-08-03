@@ -6,6 +6,10 @@ python:
 
 env:
   - FOO=BOO ONE=1
+  
+branches:
+  only:
+    - "July-2016"
 
 build:
   pre_ci:
