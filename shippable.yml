@@ -10,6 +10,10 @@ env:
 build:
   pre_ci:
     - echo "true"
+  pre_ci_boot:
+    image_name: drydock/u16pytall
+    image_tag: tip
+    pull: true
   ci:
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
