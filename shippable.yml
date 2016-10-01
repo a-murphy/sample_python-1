@@ -27,22 +27,8 @@ build:
   on_success:
     - echo "The job succeeded!!!!"
     - whoami
-  integrations:
-    hub:
-      - integrationName: "Docker Hub"
-        type: docker
-        branches:
-          only:
-            - master
-      - integrationName: "NONE"
-        type: slack
-        recepients:
-          - none
-        branches:
-          only:
-            - master
-            integrations:
-    notifications:
+integrations:
+  notifications:
       - integrationName: email
         type: email
         recipients:
