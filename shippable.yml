@@ -7,14 +7,24 @@ env:
   global:
     - FOO=BOO ONE=1
 
+services:
+  - couchdb
+
 build:
   pre_ci:
     - echo "true"
   pre_ci_boot:
-    image_name: drydock/u16pytall
+    image_name: drydock/u14pytall
     image_tag: tip
     pull: true
   ci:
+    - curl http://127.0.0.1:5984
+    - curl -X PUT http://127.0.0.1:5984/demo
+    - curl -X GET http://127.0.0.1:5984/demo
+    - curl -H 'Content-Type: application/json' \
+            -X POST http://127.0.0.1:5984/demo \
+            -d '{"company": "Example, Inc."}'
+    - curl -X GET http://127.0.0.1:5984/demo
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
