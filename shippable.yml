@@ -9,7 +9,7 @@ env:
     - SHIPPABLE_POSTGRES_VERSION="9.6"
 
 services:
-  - rabbitmq
+  - postgres
 
 build:
   pre_ci:
@@ -33,7 +33,7 @@ build:
     # Postgres - psql -c "INSERT INTO mytestdb.testtable VALUES ('name1', 'value1');" -U postgres
     # Postgres - psql -c 'SELECT * FROM mytestdb.testtable;' -U postgres
     - pip install -r requirements.txt
-    - python rabbitMQTest.py
+    #- python rabbitMQTest.py
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
     - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
