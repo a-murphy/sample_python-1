@@ -29,11 +29,8 @@ class Rabbit():
                               no_ack=True)
         channel.start_consuming()
 
-    def relayMessage(self):
-        self.readMessage()
-        return self.message
-
 if __name__ == "__main__":
     rabbit = Rabbit()
     rabbit.sendMessage()
-    print(rabbit.readMessage())
+    rabbit.readMessage()
+    print(self.message)
