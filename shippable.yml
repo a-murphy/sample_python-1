@@ -15,7 +15,7 @@ build:
     - echo "true"
   pre_ci_boot:
     image_name: drydock/u14pytall
-    image_tag: tip
+    image_tag: prod
     pull: true
   ci:
     # CouchDB - curl http://127.0.0.1:5984
