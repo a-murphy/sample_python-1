@@ -19,7 +19,6 @@ build:
     image_tag: tip
     pull: true
   ci:
-    - python rabbitMQTest.py
     # CouchDB - curl http://127.0.0.1:5984
     # CouchDB - curl -X PUT http://127.0.0.1:5984/demo
     # CouchDB - curl -X GET http://127.0.0.1:5984/demo
@@ -34,6 +33,7 @@ build:
     # Postgres - psql -c "INSERT INTO mytestdb.testtable VALUES ('name1', 'value1');" -U postgres
     # Postgres - psql -c 'SELECT * FROM mytestdb.testtable;' -U postgres
     - pip install -r requirements.txt
+    - python rabbitMQTest.py
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
     - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
