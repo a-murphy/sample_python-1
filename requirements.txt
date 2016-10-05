@@ -2,3 +2,4 @@ nose
 coverage
 python-memcached
 pika
+redis
