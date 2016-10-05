@@ -22,6 +22,7 @@ class Rabbit():
 
         def callback(ch, method, properties, body):
             self.message = body
+            print(self.message)
             channel.stop_consuming()
 
         channel.basic_consume(callback,
@@ -33,4 +34,3 @@ if __name__ == "__main__":
     rabbit = Rabbit()
     rabbit.sendMessage()
     rabbit.readMessage()
-    print(self.message)
