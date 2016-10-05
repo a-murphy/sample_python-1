@@ -21,9 +21,7 @@ build:
     - curl http://127.0.0.1:5984
     - curl -X PUT http://127.0.0.1:5984/demo
     - curl -X GET http://127.0.0.1:5984/demo
-    - curl -H 'Content-Type: application/json' \
-            -X POST http://127.0.0.1:5984/demo \
-            -d '{"company": "Example, Inc."}'
+    - "curl -H 'Content-Type: application/json' -X POST http://127.0.0.1:5984/demo -d '{\"company\": \"Example, Inc.\"}'"
     - curl -X GET http://127.0.0.1:5984/demo
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
