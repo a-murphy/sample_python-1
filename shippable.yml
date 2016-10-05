@@ -8,7 +8,7 @@ env:
     - FOO=BOO ONE=1
 
 services:
-  - memcache
+  - mysql
 
 build:
   pre_ci:
@@ -23,9 +23,11 @@ build:
     # CouchDB - curl -X GET http://127.0.0.1:5984/demo
     # CouchDB - "curl -H 'Content-Type: application/json' -X POST http://127.0.0.1:5984/demo -d '{\"company\": \"Example, Inc.\"}'"
     # CouchDB - curl -X GET http://127.0.0.1:5984/demo
-    
+    - mysql -e 'create database mytestdb;'
+    - mysql -e 'create table mytestdb.testtable (name VARCHAR(20), value VARCHAR(20));'
+    - mysql -e "INSERT INTO mytestdb.testtable VALUES ('name1', 'value1');"
+    - mysql -e 'SELECT * FROM mytestdb.testtable;'
     - pip install -r requirements.txt
-    - python memcacheTest.py
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
     - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
