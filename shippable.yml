@@ -6,6 +6,7 @@ python:
 env:
   global:
     - FOO=BOO ONE=1
+    - SHIPPABLE_POSTGRES_VERSION="9.6"
 
 services:
   - postgres
