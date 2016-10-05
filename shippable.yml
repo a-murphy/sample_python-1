@@ -8,7 +8,7 @@ env:
     - FOO=BOO ONE=1
 
 services:
-  - postgres
+  - neo4j
 
 build:
   pre_ci:
