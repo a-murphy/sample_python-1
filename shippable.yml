@@ -8,7 +8,7 @@ env:
     - FOO=BOO ONE=1
 
 services:
-  - neo4j
+  - postgres
 
 build:
   pre_ci:
@@ -27,6 +27,10 @@ build:
     # MySQL - mysql -e 'create table mytestdb.testtable (name VARCHAR(20), value VARCHAR(20));'
     # MySQL - mysql -e "INSERT INTO mytestdb.testtable VALUES ('name1', 'value1');"
     # MySQL - mysql -e 'SELECT * FROM mytestdb.testtable;'
+    - psql -c 'create database mytestdb;' -U postgres
+    - psql -c 'create table mytestdb.testtable (name VARCHAR(20), value VARCHAR(20));' -U postgres
+    - psql -c "INSERT INTO mytestdb.testtable VALUES ('name1', 'value1');" -U postgres
+    - psql -c 'SELECT * FROM mytestdb.testtable;' -U postgres
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
