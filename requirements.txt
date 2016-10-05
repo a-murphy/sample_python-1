@@ -3,3 +3,4 @@ coverage
 python-memcached
 pika
 redis
+rethinkdb==1.16.0-4
