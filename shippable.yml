@@ -8,7 +8,7 @@ env:
     - FOO=BOO ONE=1
 
 services:
-  - cassandra
+  - sqlite
 
 build:
   pre_ci:
@@ -31,8 +31,6 @@ build:
     #- psql -c 'create table testtable (name VARCHAR(20), value VARCHAR(20));' -U postgres
     #- psql -c "INSERT INTO testtable VALUES ('name1', 'value1');" -U postgres
     #- psql -c 'SELECT * FROM testtable;' -U postgres
-    - sudo service cassandra status
-    - sudo nodetool status
     - pip install -r requirements.txt
     - python redisTest.py
     - mkdir -p shippable/testresults
