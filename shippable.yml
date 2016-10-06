@@ -23,6 +23,7 @@ build:
     # CouchDB - curl -X GET http://127.0.0.1:5984/demo
     # CouchDB - "curl -H 'Content-Type: application/json' -X POST http://127.0.0.1:5984/demo -d '{\"company\": \"Example, Inc.\"}'"
     # CouchDB - curl -X GET http://127.0.0.1:5984/demo
+    - echo "Test"
     - mysql -e 'create database mytestdb;'
     - mysql -e 'create table mytestdb.testtable (name VARCHAR(20), value VARCHAR(20));'
     - mysql -e "INSERT INTO mytestdb.testtable VALUES ('name1', 'value1');"
