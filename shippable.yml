@@ -1,7 +1,15 @@
 language: python
 
 python:
+  - 2.6
   - 2.7
+  - 3.2
+  - 3.3
+  - 3.4
+  - 3.5
+  - pypy
+  - pypy3
+  
 
 env:
   global:
@@ -31,9 +39,9 @@ build:
     #- psql -c 'create table testtable (name VARCHAR(20), value VARCHAR(20));' -U postgres
     #- psql -c "INSERT INTO testtable VALUES ('name1', 'value1');" -U postgres
     #- psql -c 'SELECT * FROM testtable;' -U postgres
-    - sqlite3 testdb 'create table testtable (name VARCHAR(20), value VARCHAR(20));'
-    - sqlite3 testdb "INSERT INTO testtable VALUES ('name1', 'value1');"
-    - sqlite3 testdb 'SELECT * FROM testtable;'
+    #- sqlite3 testdb 'create table testtable (name VARCHAR(20), value VARCHAR(20));'
+    #- sqlite3 testdb "INSERT INTO testtable VALUES ('name1', 'value1');"
+    #- sqlite3 testdb 'SELECT * FROM testtable;'
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
