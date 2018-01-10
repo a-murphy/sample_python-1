@@ -3,13 +3,7 @@ language: python
 python:
   - 2.7
 
-env:
-  global:
-    - FOO=BOO ONE=1
-
 build:
-  pre_ci:
-    - echo "true"
   ci:
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
@@ -19,30 +13,5 @@ build:
     - which python && coverage xml -o shippable/codecoverage/coverage.xml test.py
   on_failure:
     - echo "The job failed!!!!!"
-    - whoami
   on_success:
     - echo "The job succeeded!!!!"
-    - whoami
-  integrations:
-    hub:
-      - integrationName: "Docker Hub"
-        type: docker
-        branches:
-          only:
-            - master
-      - integrationName: "NONE"
-        type: slack
-        recepients:
-          - none
-        branches:
-          only:
-            - master
-            integrations:
-    notifications:
-      - integrationName: email
-        type: email
-        recipients:
-          - --lastcommitter
-        on_success: always
-        on_failure: always
-
